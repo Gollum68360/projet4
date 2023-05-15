@@ -1,0 +1,72 @@
+/* Entrez le CSS personnalisé de votre thème enfant ici */
+
+.container {}
+
+.header-top-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .top-menu a[data-depth="0"]:hover {
+    color: #EE785D;
+    text-decoration: none;
+}
+
+#header,
+#header .header-top {
+    background-color: #f3f3f3;
+    padding: 0 0;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05);
+}
+
+#header .header-top a[data-depth="0"] {
+    color: #1C1C1C;
+    font-size: 14px;
+    text-transform: none;
+}
+
+#wrapper {
+    padding-top: 1.563rem;
+    background: #fff;
+}
+
+#search_widget form i {
+    position: absolute;
+    padding: .8rem;
+}
+
+
+
+#search_widget form input {
+    background-color: #fff;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+.fx-header .search-box .search-input__field::placeholder {
+    text-align: center;
+    color: #8a8a8a;
+    font-weight: 600;
+    opacity: 1;
+    padding-left: 2px;
+}
+
+.shopping-cart,
+.lol {
+    font-size: 47px;
+}
+
+
+
+#footer {
+
+    background-color: #1C1C1C;
+}
+
+.product-miniature .thumbnail-container .product-thumbnail img {
+    background-color: red;
+}
+

@@ -1,0 +1,22 @@
+"Product ID";Image;Nom;Référence;Catégorie;"Montant HT";"Montant TTC";Quantité;État;Position
+22;http://127.0.0.1/four/26/esp-ltd-ec-1000-vintage-black.jpg;"ESP LTD EC-1000 Vintage Black";;Accueil;888.333333;1066;300;0
+21;http://127.0.0.1/four/25/harley-benton-ex-84-modern-emg-vw.jpg;"ESP Arrow Black Andromeda";;Accueil;4082.500000;4899;0;1
+19;http://127.0.0.1/four/22/customizable-mug.jpg;"Mug personnalisable";demo_14;"Accessoires de maison";13.900000;16.68;300;0
+18;http://127.0.0.1/four/20/carnet-de-notes-colibri.jpg;"Carnet de notes Colibri";demo_10;Papeterie;12.900000;15.48;1200;0
+17;http://127.0.0.1/four/19/carnet-de-notes-ours-brun.jpg;"Carnet de notes Ours brun";demo_9;Papeterie;12.900000;15.48;1200;0
+16;http://127.0.0.1/four/18/carnet-de-notes-renard.jpg;"Carnet de notes Renard";demo_8;Papeterie;12.900000;15.48;1200;0
+15;http://127.0.0.1/four/23/pack-mug-affiche-encadree.jpg;"Pack Mug + Affiche encadrée";demo_21;"Accessoires de maison";35.000000;42;100;0
+14;http://127.0.0.1/four/17/illustration-vectorielle-colibri.jpg;"Illustration vectorielle Colibri";demo_20;Art;9.000000;10.8;300;0
+13;http://127.0.0.1/four/16/illustration-vectorielle-ours-brun.jpg;"Illustration vectorielle Ours brun";demo_19;Art;9.000000;10.8;300;0
+12;http://127.0.0.1/four/15/illustration-vectorielle-renard.jpg;"Illustration vectorielle Renard";demo_18;Art;9.000000;10.8;300;0
+11;http://127.0.0.1/four/13/coussin-colibri.jpg;"Coussin colibri";demo_17;"Accessoires de maison";18.900000;22.68;600;0
+10;http://127.0.0.1/four/11/coussin-ours-brun.jpg;"Coussin ours brun";demo_16;"Accessoires de maison";18.900000;22.68;600;0
+9;http://127.0.0.1/four/9/coussin-renard.jpg;"Coussin renard";demo_15;"Accessoires de maison";18.900000;22.68;600;0
+8;http://127.0.0.1/four/8/mug-today-is-a-good-day.jpg;"Mug Today is a good day";demo_13;"Accessoires de maison";11.900000;14.28;300;0
+7;http://127.0.0.1/four/7/mug-the-adventure-begins.jpg;"Mug The adventure begins";demo_12;"Accessoires de maison";11.900000;14.28;300;0
+6;http://127.0.0.1/four/6/mug-the-best-is-yet-to-come.jpg;"Mug The best is yet to come";demo_11;"Accessoires de maison";11.900000;14.28;300;0
+5;http://127.0.0.1/four/5/affiche-encadree-today-is-a-good-day.jpg;"Affiche encadrée Today is a good day";demo_7;Art;29.000000;34.8;900;0
+4;http://127.0.0.1/four/4/affiche-encadree-the-adventure-begins.jpg;"Affiche encadrée The adventure begins";demo_5;Art;29.000000;34.8;1500;0
+3;http://127.0.0.1/four/3/affiche-encadree-the-best-is-yet-to-come.jpg;"Affiche encadrée The best is yet to come";demo_6;Art;29.000000;34.8;1500;0
+2;http://127.0.0.1/four/21/brown-bear-printed-sweater.jpg;"Pull imprimé colibri";demo_3;Femmes;35.900000;43.08;2100;0
+1;http://127.0.0.1/four/1/hummingbird-printed-t-shirt.jpg;"T-shirt imprimé colibri";demo_1;Hommes;23.900000;28.68;2400;0

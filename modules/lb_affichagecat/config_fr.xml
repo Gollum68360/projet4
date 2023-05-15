@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>lb_affichagecat</name>
+    <displayName><![CDATA[Acceuil]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Afficher les cat&eacute;gories sur la page d\&#039;accueil]]></description>
+    <author><![CDATA[Lucien]]></author>
+    <tab><![CDATA[]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>
