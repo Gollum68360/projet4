@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 15, 2023 at 03:07 AM
+-- Generation Time: May 16, 2023 at 04:09 AM
 -- Server version: 8.0.31
 -- PHP Version: 7.4.33
 
@@ -1819,10 +1819,6 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (724, 'ROLE_MOD_MODULE_STATSSTOCK_DELETE'),
 (722, 'ROLE_MOD_MODULE_STATSSTOCK_READ'),
 (723, 'ROLE_MOD_MODULE_STATSSTOCK_UPDATE'),
-(861, 'ROLE_MOD_MODULE_TP_AVIS_PRODUITS_CREATE'),
-(864, 'ROLE_MOD_MODULE_TP_AVIS_PRODUITS_DELETE'),
-(862, 'ROLE_MOD_MODULE_TP_AVIS_PRODUITS_READ'),
-(863, 'ROLE_MOD_MODULE_TP_AVIS_PRODUITS_UPDATE'),
 (725, 'ROLE_MOD_MODULE_WELCOME_CREATE'),
 (728, 'ROLE_MOD_MODULE_WELCOME_DELETE'),
 (726, 'ROLE_MOD_MODULE_WELCOME_READ'),
@@ -3041,15 +3037,15 @@ INSERT INTO `ps_category_product` (`id_category`, `id_product`, `position`) VALU
 (2, 26, 7),
 (2, 27, 8),
 (2, 28, 9),
-(10, 26, 1),
-(10, 27, 2),
-(10, 28, 3),
+(10, 27, 1),
+(10, 28, 2),
 (11, 22, 1),
 (11, 21, 2),
 (11, 20, 3),
+(11, 26, 4),
+(11, 23, 5),
 (12, 25, 1),
-(12, 24, 2),
-(12, 23, 3);
+(12, 24, 2);
 
 -- --------------------------------------------------------
 
@@ -3495,7 +3491,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (145, NULL, NULL, 'PS_VIRTUAL_PROD_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '2023-04-15 19:36:02'),
 (146, NULL, NULL, 'PS_CUSTOMIZATION_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (147, NULL, NULL, 'PS_CART_RULE_FEATURE_ACTIVE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(148, NULL, NULL, 'PS_PACK_FEATURE_ACTIVE', NULL, '0000-00-00 00:00:00', '2023-05-09 17:47:02'),
+(148, NULL, NULL, 'PS_PACK_FEATURE_ACTIVE', NULL, '0000-00-00 00:00:00', '2023-05-16 06:04:58'),
 (149, NULL, NULL, 'PS_ALIAS_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (150, NULL, NULL, 'PS_TAX_ADDRESS_TYPE', 'id_address_delivery', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (151, NULL, NULL, 'PS_SHOP_DEFAULT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3776,10 +3772,10 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (435, NULL, NULL, 'KAWA_INFO_CATETGORY_4', '1', '2023-05-11 08:53:13', '2023-05-11 08:55:07'),
 (436, NULL, NULL, 'KAWA_INFO_CATETGORY_ACTIVE', '0', '2023-05-11 08:53:13', '2023-05-11 08:55:47'),
 (437, NULL, NULL, 'KAWA_IMAGE_3', '333967.webp', '2023-05-11 09:57:19', '2023-05-11 09:57:19'),
-(438, NULL, NULL, 'LB_TITRE_CAT', NULL, '2023-05-11 10:15:37', '2023-05-12 08:27:41'),
-(439, NULL, NULL, 'LB_CATEGORY_1', NULL, '2023-05-11 10:18:55', '2023-05-12 08:27:41'),
-(440, NULL, NULL, 'LB_CATEGORY_2', NULL, '2023-05-11 10:18:55', '2023-05-12 08:27:41'),
-(441, NULL, NULL, 'LB_CATEGORY_3', NULL, '2023-05-11 10:18:55', '2023-05-12 08:27:41'),
+(438, NULL, NULL, 'LB_TITRE_CAT', '<p>Nos catégories</p>', '2023-05-11 10:15:37', '2023-05-16 06:06:24'),
+(439, NULL, NULL, 'LB_CATEGORY_1', '10', '2023-05-11 10:18:55', '2023-05-16 06:06:24'),
+(440, NULL, NULL, 'LB_CATEGORY_2', '11', '2023-05-11 10:18:55', '2023-05-16 06:06:24'),
+(441, NULL, NULL, 'LB_CATEGORY_3', '12', '2023-05-11 10:18:55', '2023-05-16 06:06:24'),
 (442, NULL, NULL, 'LB_IMAGE_1', '124838.webp', '2023-05-11 10:37:17', '2023-05-11 10:37:17'),
 (443, NULL, NULL, 'LB_IMAGE_2', '130179.webp', '2023-05-11 10:37:17', '2023-05-11 10:37:17'),
 (444, NULL, NULL, 'LB_IMAGE_3', '333967.webp', '2023-05-11 10:37:17', '2023-05-11 10:37:17');
@@ -5287,7 +5283,7 @@ CREATE TABLE IF NOT EXISTS `ps_employee` (
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`, `reset_password_token`, `reset_password_validity`, `has_enabled_gravatar`) VALUES
-(1, 1, 1, 'Bruzzese', 'Lucien', 'lucien_bruzzese@msn.com', '$2y$10$gMWYrxnCuLNGHqUl8eRd3.zBMhBV05E/XOSWeFyXWDGI8v/uNh3v2', '2023-04-15 11:34:01', '2023-03-15', '2023-04-15', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 0, 0, 0, '2023-05-15', NULL, '0000-00-00 00:00:00', 0);
+(1, 1, 1, 'Bruzzese', 'Lucien', 'lucien_bruzzese@msn.com', '$2y$10$gMWYrxnCuLNGHqUl8eRd3.zBMhBV05E/XOSWeFyXWDGI8v/uNh3v2', '2023-04-15 11:34:01', '2023-03-15', '2023-04-15', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 0, 0, 0, '2023-05-16', NULL, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -5301,14 +5297,15 @@ CREATE TABLE IF NOT EXISTS `ps_employee_session` (
   `id_employee` int UNSIGNED DEFAULT NULL,
   `token` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`id_employee_session`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `ps_employee_session`
 --
 
 INSERT INTO `ps_employee_session` (`id_employee_session`, `id_employee`, `token`) VALUES
-(7, 1, 'b8a42861a657d3b21cb9e73e727180cefa1d52f4');
+(7, 1, 'b8a42861a657d3b21cb9e73e727180cefa1d52f4'),
+(17, 1, 'd4564ca5fe14f64fff93ab5a56cdec811fc52692');
 
 -- --------------------------------------------------------
 
@@ -6730,13 +6727,13 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (22, 1, 48, 1),
 (22, 1, 712, 1),
 (24, 1, 71, 1),
+(25, 1, 15, 1),
 (25, 1, 19, 1),
 (25, 1, 20, 1),
 (25, 1, 82, 1),
 (25, 1, 717, 1),
 (25, 1, 718, 1),
 (25, 1, 719, 1),
-(26, 1, 15, 1),
 (27, 1, 709, 1),
 (28, 1, 41, 1),
 (28, 1, 141, 1),
@@ -6828,7 +6825,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (22, 1, 683, 2),
 (22, 1, 699, 2),
 (22, 1, 700, 2),
-(25, 1, 15, 2),
 (25, 1, 28, 2),
 (26, 1, 16, 2),
 (26, 1, 710, 2),
@@ -6845,6 +6841,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (61, 1, 690, 2),
 (62, 1, 750, 2),
 (64, 1, 14, 2),
+(67, 1, 15, 2),
 (4, 1, 682, 3),
 (5, 1, 687, 3),
 (6, 1, 693, 3),
@@ -6865,7 +6862,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (61, 1, 694, 3),
 (62, 1, 46, 3),
 (64, 1, 82, 3),
-(67, 1, 15, 3),
 (1, 1, 41, 4),
 (5, 1, 682, 4),
 (6, 1, 687, 4),
@@ -6930,7 +6926,7 @@ CREATE TABLE IF NOT EXISTS `ps_image` (
   UNIQUE KEY `id_product_cover` (`id_product`,`cover`),
   UNIQUE KEY `idx_product_image` (`id_image`,`id_product`,`cover`),
   KEY `image_product` (`id_product`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `ps_image`
@@ -6938,14 +6934,14 @@ CREATE TABLE IF NOT EXISTS `ps_image` (
 
 INSERT INTO `ps_image` (`id_image`, `id_product`, `position`, `cover`) VALUES
 (24, 20, 1, 1),
-(25, 21, 1, 1),
-(26, 22, 1, 1),
-(27, 23, 1, 1),
-(28, 24, 1, 1),
-(29, 25, 1, 1),
-(30, 26, 1, 1),
-(31, 27, 1, 1),
-(32, 28, 1, 1);
+(34, 21, 1, 1),
+(35, 22, 1, 1),
+(36, 23, 1, 1),
+(37, 26, 1, 1),
+(38, 27, 1, 1),
+(39, 24, 1, 1),
+(40, 25, 1, 1),
+(41, 28, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -6968,14 +6964,14 @@ CREATE TABLE IF NOT EXISTS `ps_image_lang` (
 
 INSERT INTO `ps_image_lang` (`id_image`, `id_lang`, `legend`) VALUES
 (24, 1, ''),
-(25, 1, ''),
-(26, 1, ''),
-(27, 1, ''),
-(28, 1, ''),
-(29, 1, ''),
-(30, 1, ''),
-(31, 1, ''),
-(32, 1, '');
+(34, 1, ''),
+(35, 1, ''),
+(36, 1, ''),
+(37, 1, ''),
+(38, 1, ''),
+(39, 1, ''),
+(40, 1, ''),
+(41, 1, '');
 
 -- --------------------------------------------------------
 
@@ -7000,14 +6996,14 @@ CREATE TABLE IF NOT EXISTS `ps_image_shop` (
 
 INSERT INTO `ps_image_shop` (`id_product`, `id_image`, `id_shop`, `cover`) VALUES
 (20, 24, 1, 1),
-(21, 25, 1, 1),
-(22, 26, 1, 1),
-(23, 27, 1, 1),
-(24, 28, 1, 1),
-(25, 29, 1, 1),
-(26, 30, 1, 1),
-(27, 31, 1, 1),
-(28, 32, 1, 1);
+(21, 34, 1, 1),
+(22, 35, 1, 1),
+(23, 36, 1, 1),
+(24, 39, 1, 1),
+(25, 40, 1, 1),
+(26, 37, 1, 1),
+(27, 38, 1, 1),
+(28, 41, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -7471,13 +7467,13 @@ INSERT INTO `ps_layered_price_index` (`id_product`, `id_currency`, `id_shop`, `p
 (19, 1, 1, '16.680000', '16.680000', 8),
 (20, 1, 1, '1099.000000', '1099.000000', 8),
 (21, 1, 1, '1099.000000', '1099.000000', 8),
-(22, 1, 1, '1099.000000', '1099.000000', 8),
-(23, 1, 1, '1099.000000', '1099.000000', 8),
-(24, 1, 1, '1099.000000', '1099.000000', 8),
-(25, 1, 1, '1099.000000', '1099.000000', 8),
-(26, 1, 1, '1099.000000', '1099.000000', 8),
-(27, 1, 1, '1099.000000', '1099.000000', 8),
-(28, 1, 1, '1099.000000', '1099.000000', 8);
+(22, 1, 1, '1190.000000', '1190.000000', 8),
+(23, 1, 1, '119.000000', '119.000000', 8),
+(24, 1, 1, '499.000000', '499.000000', 8),
+(25, 1, 1, '459.000000', '459.000000', 8),
+(26, 1, 1, '499.000000', '499.000000', 8),
+(27, 1, 1, '199.000000', '199.000000', 8),
+(28, 1, 1, '499.000000', '499.000000', 8);
 
 -- --------------------------------------------------------
 
@@ -7659,7 +7655,7 @@ CREATE TABLE IF NOT EXISTS `ps_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
-) ENGINE=InnoDB AUTO_INCREMENT=325 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=349 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `ps_log`
@@ -7990,7 +7986,31 @@ INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (322, 1, 0, 'Protect vendor folder in module tp_avis_produits', '', 0, 1, NULL, 1, 0, 1, '2023-05-12 08:28:43', '2023-05-12 08:28:43');
 INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_type`, `object_id`, `id_shop`, `id_shop_group`, `id_lang`, `in_all_shops`, `id_employee`, `date_add`, `date_upd`) VALUES
 (323, 1, 0, 'Module tp_avis_produits has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-05-12 08:28:43', '2023-05-12 08:28:43'),
-(324, 1, 0, 'Connexion au back-office depuis 127.0.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-05-15 05:05:00', '2023-05-15 05:05:00');
+(324, 1, 0, 'Connexion au back-office depuis 127.0.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-05-15 05:05:00', '2023-05-15 05:05:00'),
+(325, 1, 0, 'Connexion au back-office depuis 127.0.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-05-16 05:13:40', '2023-05-16 05:13:40'),
+(326, 1, 0, 'Product modification', 'Product', 21, 1, NULL, 1, 0, 1, '2023-05-16 05:38:56', '2023-05-16 05:38:56'),
+(327, 1, 0, 'Product modification', 'Product', 21, 1, NULL, 1, 0, 1, '2023-05-16 05:39:28', '2023-05-16 05:39:28'),
+(328, 1, 0, 'Product modification', 'Product', 21, 1, NULL, 1, 0, 1, '2023-05-16 05:42:53', '2023-05-16 05:42:53'),
+(329, 1, 0, 'Product modification', 'Product', 21, 1, NULL, 1, 0, 1, '2023-05-16 05:44:18', '2023-05-16 05:44:18'),
+(330, 1, 0, 'Product modification', 'Product', 22, 1, NULL, 1, 0, 1, '2023-05-16 05:44:54', '2023-05-16 05:44:54'),
+(331, 1, 0, 'Product modification', 'Product', 22, 1, NULL, 1, 0, 1, '2023-05-16 05:46:21', '2023-05-16 05:46:21'),
+(332, 1, 0, 'Product modification', 'Product', 23, 1, NULL, 1, 0, 1, '2023-05-16 05:48:39', '2023-05-16 05:48:39'),
+(333, 1, 0, 'Product modification', 'Product', 23, 1, NULL, 1, 0, 1, '2023-05-16 05:48:52', '2023-05-16 05:48:52'),
+(334, 1, 0, 'Product modification', 'Product', 26, 1, NULL, 1, 0, 1, '2023-05-16 05:50:50', '2023-05-16 05:50:50'),
+(335, 1, 0, 'Product modification', 'Product', 27, 1, NULL, 1, 0, 1, '2023-05-16 05:52:19', '2023-05-16 05:52:19'),
+(336, 1, 0, 'Product modification', 'Product', 27, 1, NULL, 1, 0, 1, '2023-05-16 05:52:36', '2023-05-16 05:52:36'),
+(337, 1, 0, 'Product modification', 'Product', 23, 1, NULL, 1, 0, 1, '2023-05-16 05:53:05', '2023-05-16 05:53:05'),
+(338, 1, 0, 'Product modification', 'Product', 24, 1, NULL, 1, 0, 1, '2023-05-16 05:55:47', '2023-05-16 05:55:47'),
+(339, 1, 0, 'Product modification', 'Product', 25, 1, NULL, 1, 0, 1, '2023-05-16 06:00:38', '2023-05-16 06:00:38'),
+(340, 1, 0, 'Product modification', 'Product', 28, 1, NULL, 1, 0, 1, '2023-05-16 06:01:56', '2023-05-16 06:01:56'),
+(341, 1, 0, 'Product modification', 'Product', 28, 1, NULL, 1, 0, 1, '2023-05-16 06:03:32', '2023-05-16 06:03:32'),
+(342, 1, 0, 'Product modification', 'Product', 28, 1, NULL, 1, 0, 1, '2023-05-16 06:03:38', '2023-05-16 06:03:38'),
+(343, 1, 0, 'Product modification', 'Product', 27, 1, NULL, 1, 0, 1, '2023-05-16 06:03:46', '2023-05-16 06:03:46'),
+(344, 1, 0, 'Product modification', 'Product', 26, 1, NULL, 1, 0, 1, '2023-05-16 06:04:09', '2023-05-16 06:04:09'),
+(345, 1, 0, 'Product modification', 'Product', 25, 1, NULL, 1, 0, 1, '2023-05-16 06:04:19', '2023-05-16 06:04:19'),
+(346, 1, 0, 'Product modification', 'Product', 24, 1, NULL, 1, 0, 1, '2023-05-16 06:04:31', '2023-05-16 06:04:31'),
+(347, 1, 0, 'Product modification', 'Product', 23, 1, NULL, 1, 0, 1, '2023-05-16 06:04:47', '2023-05-16 06:04:47'),
+(348, 1, 0, 'Product modification', 'Product', 22, 1, NULL, 1, 0, 1, '2023-05-16 06:04:58', '2023-05-16 06:04:58');
 
 -- --------------------------------------------------------
 
@@ -8339,8 +8359,7 @@ INSERT INTO `ps_module` (`id_module`, `name`, `active`, `version`) VALUES
 (63, 'blockreassurance', 1, '5.1.1'),
 (64, 'ps_facetedsearch', 1, '3.8.0'),
 (66, 'lb_module_simple', 1, '1.0.0'),
-(67, 'lb_affichagecat', 1, '1.0.0'),
-(68, 'tp_avis_produits', 1, '1.0');
+(67, 'lb_affichagecat', 1, '1.0.0');
 
 -- --------------------------------------------------------
 
@@ -8619,11 +8638,7 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 857),
 (1, 858),
 (1, 859),
-(1, 860),
-(1, 861),
-(1, 862),
-(1, 863),
-(1, 864);
+(1, 860);
 
 -- --------------------------------------------------------
 
@@ -9116,10 +9131,7 @@ INSERT INTO `ps_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (66, 1, 3),
 (67, 1, 1),
 (67, 1, 2),
-(67, 1, 3),
-(68, 1, 1),
-(68, 1, 2),
-(68, 1, 3);
+(67, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -9147,7 +9159,7 @@ INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `
 (3, 1, 29, '2023-05-09 08:23:29', '2023-05-09 08:28:39'),
 (4, 1, 12, '2023-05-09 11:20:39', '2023-05-09 11:20:49'),
 (5, 1, 1, '2023-05-09 14:11:13', '2023-05-09 14:11:13'),
-(6, 1, 67, '2023-05-11 07:59:44', '2023-05-11 09:16:19'),
+(6, 1, 67, '2023-05-11 07:59:44', '2023-05-16 06:05:48'),
 (7, 1, 68, '2023-05-12 08:30:13', '2023-05-12 09:04:55'),
 (8, 1, 11, '2023-05-12 08:56:08', '2023-05-12 08:56:08');
 
@@ -9252,8 +9264,7 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (63, 1, 7),
 (64, 1, 7),
 (66, 1, 7),
-(67, 1, 7),
-(68, 1, 7);
+(67, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -10074,14 +10085,14 @@ CREATE TABLE IF NOT EXISTS `ps_product` (
 
 INSERT INTO `ps_product` (`id_product`, `id_supplier`, `id_manufacturer`, `id_category_default`, `id_shop_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ean13`, `isbn`, `upc`, `mpn`, `ecotax`, `quantity`, `minimal_quantity`, `low_stock_threshold`, `low_stock_alert`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `reference`, `supplier_reference`, `location`, `width`, `height`, `depth`, `weight`, `out_of_stock`, `additional_delivery_times`, `quantity_discount`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_type_redirected`, `available_for_order`, `available_date`, `show_condition`, `condition`, `show_price`, `indexed`, `visibility`, `cache_is_pack`, `cache_has_attachments`, `is_virtual`, `cache_default_attribute`, `date_add`, `date_upd`, `advanced_stock_management`, `pack_stock_type`, `state`, `product_type`) VALUES
 (20, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 09:30:25', '2023-05-09 10:19:37', 0, 3, 1, ''),
-(21, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:05:58', '2023-05-09 10:19:20', 0, 3, 1, ''),
-(22, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:26', '2023-05-09 10:19:03', 0, 3, 1, ''),
-(23, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:26', '2023-05-09 10:18:38', 0, 3, 1, ''),
-(24, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:36', '2023-05-09 10:18:19', 0, 3, 1, ''),
-(25, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:37', '2023-05-09 10:17:53', 0, 3, 1, ''),
-(26, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:38', '2023-05-09 10:19:37', 0, 3, 1, ''),
-(27, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:38', '2023-05-09 10:19:37', 0, 3, 1, ''),
-(28, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:47', '2023-05-09 17:47:02', 0, 3, 1, '');
+(21, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:05:58', '2023-05-16 05:44:18', 0, 3, 1, ''),
+(22, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '1190.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:26', '2023-05-16 06:04:58', 0, 3, 1, ''),
+(23, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '119.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:26', '2023-05-16 06:04:47', 0, 3, 1, ''),
+(24, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '499.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:36', '2023-05-16 06:04:31', 0, 3, 1, ''),
+(25, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '459.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:37', '2023-05-16 06:04:19', 0, 3, 1, ''),
+(26, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '499.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:38', '2023-05-16 06:04:09', 0, 3, 1, ''),
+(27, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '199.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:38', '2023-05-16 06:03:45', 0, 3, 1, ''),
+(28, 0, 0, 2, 1, 0, 0, 0, '', '', '', '', '0.000000', 0, 1, NULL, 0, '499.000000', '0.000000', '', '0.000000', '0.000000', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-05-09 10:06:47', '2023-05-16 06:03:38', 0, 3, 1, '');
 
 -- --------------------------------------------------------
 
@@ -10418,13 +10429,13 @@ CREATE TABLE IF NOT EXISTS `ps_product_lang` (
 
 INSERT INTO `ps_product_lang` (`id_product`, `id_shop`, `id_lang`, `description`, `description_short`, `link_rewrite`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `available_now`, `available_later`, `delivery_in_stock`, `delivery_out_stock`) VALUES
 (20, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'ESP LTD Arrow BKM BLKS', '', '', '', ''),
-(21, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'copy of ESP LTD Arrow BKM BLKS', '', '', '', ''),
-(22, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'copy of ESP LTD Arrow BKM BLKS', '', '', '', ''),
-(23, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'copy of ESP LTD Arrow BKM BLKS', '', '', '', ''),
-(24, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'copy of ESP LTD Arrow BKM BLKS', '', '', '', ''),
-(25, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'copy of ESP LTD Arrow BKM BLKS', '', '', '', ''),
-(26, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'copy of ESP LTD Arrow BKM BLKS', '', '', '', ''),
-(27, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'copy of ESP LTD Arrow BKM BLKS', '', '', '', ''),
+(21, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'Gibson Original Designer 80s Explorer Ebony', '', '', '', ''),
+(22, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'ESP LTD M-HT Arctic Metal SWS', '', '', '', ''),
+(23, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'Thomann Classic 4/4 Guitar', '', '', '', ''),
+(24, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'LAG Travel KAE Tramontane', '', '', '', ''),
+(25, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'LAG Travel KAE Tramontane B-Stock', '', '', '', ''),
+(26, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'LAG OC118CE Occitania', '', '', '', ''),
+(27, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'Thomann Classica Flamenco 1F', '', '', '', ''),
 (28, 1, 1, '<ul class=\"fx-list product-text__list\">\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Corps en acajou</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Manche 3 pièces en érable</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Touche en ébène de Makassar</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Largeur au sillet: 42 mm</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Diapason: 648 mm (25,5\")</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Vibrato Floyd Rose 1000</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">1 micro double bobinage EMG 81</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Commutateur Kill EMG TKO</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Accastillage noir</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Mécaniques Grover</span></li>\r\n<li class=\"fx-list__item list-item fx-list__item--circle\"><span class=\"fx-text fx-text--plus list-item__text\">Couleur: Black Satin</span></li>\r\n</ul>\r\n<p></p>', '', 'esp-ltd-mk-600-blks', '', '', '', 'copy of ESP LTD Arrow BKM BLKS', '', '', '', '');
 
 -- --------------------------------------------------------
@@ -10496,14 +10507,14 @@ CREATE TABLE IF NOT EXISTS `ps_product_shop` (
 
 INSERT INTO `ps_product_shop` (`id_product`, `id_shop`, `id_category_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ecotax`, `minimal_quantity`, `low_stock_threshold`, `low_stock_alert`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_type_redirected`, `available_for_order`, `available_date`, `show_condition`, `condition`, `show_price`, `indexed`, `visibility`, `cache_default_attribute`, `advanced_stock_management`, `date_add`, `date_upd`, `pack_stock_type`) VALUES
 (20, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 09:30:25', '2023-05-09 10:19:37', 3),
-(21, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:05:58', '2023-05-09 10:19:20', 3),
-(22, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:26', '2023-05-09 10:19:03', 3),
-(23, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:26', '2023-05-09 10:18:38', 3),
-(24, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:36', '2023-05-09 10:18:19', 3),
-(25, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:37', '2023-05-09 10:17:53', 3),
-(26, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:38', '2023-05-09 10:19:37', 3),
-(27, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:38', '2023-05-09 10:19:37', 3),
-(28, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:47', '2023-05-09 17:47:02', 3);
+(21, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '1099.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:05:58', '2023-05-16 05:44:18', 3),
+(22, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '1190.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:26', '2023-05-16 06:04:58', 3),
+(23, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '119.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:26', '2023-05-16 06:04:47', 3),
+(24, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '499.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:36', '2023-05-16 06:04:31', 3),
+(25, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '459.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:37', '2023-05-16 06:04:19', 3),
+(26, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '499.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:38', '2023-05-16 06:04:09', 3),
+(27, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '199.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:38', '2023-05-16 06:03:45', 3),
+(28, 1, 2, 0, 0, 0, '0.000000', 1, NULL, 0, '499.000000', '0.000000', '', '0.000000', '0.000000', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-05-09 10:06:47', '2023-05-16 06:03:38', 3);
 
 -- --------------------------------------------------------
 
@@ -11138,12 +11149,12 @@ INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
 (21, 797, 1),
 (21, 798, 1),
 (21, 799, 3),
-(21, 763, 6),
-(21, 764, 6),
-(21, 765, 6),
-(21, 766, 6),
-(21, 767, 6),
-(21, 800, 6),
+(21, 1442, 6),
+(21, 1443, 6),
+(21, 1444, 6),
+(21, 1445, 6),
+(21, 1446, 6),
+(21, 1447, 6),
 (22, 768, 1),
 (22, 769, 1),
 (22, 770, 1),
@@ -11178,10 +11189,11 @@ INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
 (22, 799, 3),
 (22, 763, 6),
 (22, 764, 6),
-(22, 765, 6),
-(22, 766, 6),
-(22, 767, 6),
-(22, 800, 6),
+(22, 1518, 6),
+(22, 1519, 6),
+(22, 1520, 6),
+(22, 1521, 6),
+(22, 1522, 6),
 (23, 768, 1),
 (23, 769, 1),
 (23, 770, 1),
@@ -11214,12 +11226,9 @@ INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
 (23, 797, 1),
 (23, 798, 1),
 (23, 799, 3),
-(23, 763, 6),
-(23, 764, 6),
-(23, 765, 6),
-(23, 766, 6),
-(23, 767, 6),
-(23, 800, 6),
+(23, 1596, 6),
+(23, 1597, 6),
+(23, 1598, 6),
 (24, 768, 1),
 (24, 769, 1),
 (24, 770, 1),
@@ -11252,12 +11261,10 @@ INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
 (24, 797, 1),
 (24, 798, 1),
 (24, 799, 3),
-(24, 763, 6),
-(24, 764, 6),
-(24, 765, 6),
-(24, 766, 6),
-(24, 767, 6),
-(24, 800, 6),
+(24, 1666, 6),
+(24, 1800, 6),
+(24, 1801, 6),
+(24, 1802, 6),
 (25, 768, 1),
 (25, 769, 1),
 (25, 770, 1),
@@ -11290,12 +11297,13 @@ INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
 (25, 797, 1),
 (25, 798, 1),
 (25, 799, 3),
-(25, 763, 6),
-(25, 764, 6),
-(25, 765, 6),
-(25, 766, 6),
-(25, 767, 6),
-(25, 800, 6),
+(25, 1666, 6),
+(25, 1800, 6),
+(25, 1801, 6),
+(25, 1802, 6),
+(25, 1836, 6),
+(25, 1837, 6),
+(25, 1838, 6),
 (26, 768, 1),
 (26, 769, 1),
 (26, 770, 1),
@@ -11328,12 +11336,9 @@ INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
 (26, 797, 1),
 (26, 798, 1),
 (26, 799, 3),
-(26, 763, 6),
-(26, 764, 6),
-(26, 765, 6),
-(26, 766, 6),
-(26, 767, 6),
-(26, 800, 6),
+(26, 1666, 6),
+(26, 1667, 6),
+(26, 1668, 6),
 (27, 768, 1),
 (27, 769, 1),
 (27, 770, 1),
@@ -11366,12 +11371,9 @@ INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
 (27, 797, 1),
 (27, 798, 1),
 (27, 799, 3),
-(27, 763, 6),
-(27, 764, 6),
-(27, 765, 6),
-(27, 766, 6),
-(27, 767, 6),
-(27, 800, 6),
+(27, 1596, 6),
+(27, 1701, 6),
+(27, 1702, 6),
 (28, 768, 1),
 (28, 769, 1),
 (28, 770, 1),
@@ -11425,7 +11427,7 @@ CREATE TABLE IF NOT EXISTS `ps_search_word` (
   `word` varchar(30) NOT NULL,
   PRIMARY KEY (`id_word`),
   UNIQUE KEY `id_lang` (`id_lang`,`id_shop`,`word`)
-) ENGINE=InnoDB AUTO_INCREMENT=1370 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2208 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `ps_search_word`
@@ -11433,42 +11435,79 @@ CREATE TABLE IF NOT EXISTS `ps_search_word` (
 
 INSERT INTO `ps_search_word` (`id_word`, `id_shop`, `id_lang`, `word`) VALUES
 (784, 1, 1, '1000'),
+(1707, 1, 1, '10001'),
 (780, 1, 1, '255'),
 (779, 1, 1, '648'),
+(1445, 1, 1, '80s'),
+(1708, 1, 1, '81commutateur'),
 (769, 1, 1, 'acajou'),
+(1703, 1, 1, 'acajoumanche'),
 (792, 1, 1, 'accastillage'),
 (799, 1, 1, 'accueil'),
+(1518, 1, 1, 'arctic'),
 (765, 1, 1, 'arrow'),
+(1838, 1, 1, 'b-stock'),
 (766, 1, 1, 'bkm'),
 (797, 1, 1, 'black'),
 (767, 1, 1, 'blks'),
 (787, 1, 1, 'bobinage'),
+(1837, 1, 1, 'bstock'),
+(1597, 1, 1, 'classic'),
+(1701, 1, 1, 'classica'),
 (789, 1, 1, 'commutateur'),
 (800, 1, 1, 'copy'),
 (768, 1, 1, 'corps'),
 (796, 1, 1, 'couleur'),
+(1444, 1, 1, 'designer'),
 (778, 1, 1, 'diapason'),
 (786, 1, 1, 'double'),
 (774, 1, 1, 'ebene'),
+(1447, 1, 1, 'ebony'),
 (788, 1, 1, 'emg'),
 (772, 1, 1, 'erable'),
+(1704, 1, 1, 'erabletouche'),
 (763, 1, 1, 'esp'),
+(1446, 1, 1, 'explorer'),
+(1702, 1, 1, 'flamenco'),
 (782, 1, 1, 'floyd'),
+(1442, 1, 1, 'gibson'),
 (795, 1, 1, 'grover'),
+(1711, 1, 1, 'grovercouleur'),
+(1598, 1, 1, 'guitar'),
+(1372, 1, 1, 'hetfield'),
+(1371, 1, 1, 'james'),
+(1801, 1, 1, 'kae'),
 (790, 1, 1, 'kill'),
+(1666, 1, 1, 'lag'),
 (776, 1, 1, 'largeur'),
 (764, 1, 1, 'ltd'),
+(1522, 1, 1, 'm-ht'),
 (775, 1, 1, 'makassar'),
+(1705, 1, 1, 'makassarlargeur'),
 (770, 1, 1, 'manche'),
 (794, 1, 1, 'mecaniques'),
+(1519, 1, 1, 'metal'),
+(1521, 1, 1, 'mht'),
 (785, 1, 1, 'micro'),
+(1706, 1, 1, 'mmdiapason'),
 (793, 1, 1, 'noir'),
+(1710, 1, 1, 'noirmecaniques'),
+(1667, 1, 1, 'oc118ce'),
+(1668, 1, 1, 'occitania'),
+(1443, 1, 1, 'original'),
 (771, 1, 1, 'pieces'),
 (783, 1, 1, 'rose'),
 (798, 1, 1, 'satin'),
 (777, 1, 1, 'sillet'),
+(1370, 1, 1, 'snakebyte'),
+(1836, 1, 1, 'stock'),
+(1520, 1, 1, 'sws'),
+(1596, 1, 1, 'thomann'),
 (791, 1, 1, 'tko'),
+(1709, 1, 1, 'tkoaccastillage'),
 (773, 1, 1, 'touche'),
+(1802, 1, 1, 'tramontane'),
+(1800, 1, 1, 'travel'),
 (781, 1, 1, 'vibrato');
 
 -- --------------------------------------------------------
@@ -11651,7 +11690,7 @@ CREATE TABLE IF NOT EXISTS `ps_specific_price_priority` (
   `priority` varchar(80) NOT NULL,
   PRIMARY KEY (`id_specific_price_priority`,`id_product`),
   UNIQUE KEY `id_product` (`id_product`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `ps_specific_price_priority`
@@ -11664,7 +11703,9 @@ INSERT INTO `ps_specific_price_priority` (`id_specific_price_priority`, `id_prod
 (6, 24, 'id_shop;id_currency;id_country;id_group'),
 (7, 23, 'id_shop;id_currency;id_country;id_group'),
 (8, 22, 'id_shop;id_currency;id_country;id_group'),
-(11, 28, 'id_shop;id_currency;id_country;id_group');
+(11, 28, 'id_shop;id_currency;id_country;id_group'),
+(21, 26, 'id_shop;id_currency;id_country;id_group'),
+(22, 27, 'id_shop;id_currency;id_country;id_group');
 
 -- --------------------------------------------------------
 
@@ -12187,13 +12228,13 @@ INSERT INTO `ps_stock_available` (`id_stock_available`, `id_product`, `id_produc
 (69, 1, 0, 1, 0, 0, 0, 0, 0, 0, ''),
 (70, 20, 0, 1, 0, 0, 0, 0, 0, 2, ''),
 (71, 21, 0, 1, 0, 0, 0, 0, 0, 2, ''),
-(72, 22, 0, 1, 0, 0, 0, 0, 0, 2, ''),
-(73, 23, 0, 1, 0, 0, 0, 0, 0, 2, ''),
-(74, 24, 0, 1, 0, 0, 0, 0, 0, 2, ''),
-(75, 25, 0, 1, 0, 0, 0, 0, 0, 2, ''),
-(76, 26, 0, 1, 0, 0, 0, 0, 0, 2, ''),
-(77, 27, 0, 1, 0, 0, 0, 0, 0, 2, ''),
-(78, 28, 0, 1, 0, 0, 0, 0, 0, 2, '');
+(72, 22, 0, 1, 0, 300, 0, 0, 0, 2, ''),
+(73, 23, 0, 1, 0, 300, 0, 0, 0, 2, ''),
+(74, 24, 0, 1, 0, 300, 0, 0, 0, 2, ''),
+(75, 25, 0, 1, 0, 300, 0, 0, 0, 2, ''),
+(76, 26, 0, 1, 0, 300, 0, 0, 0, 2, ''),
+(77, 27, 0, 1, 0, 300, 0, 0, 0, 2, ''),
+(78, 28, 0, 1, 0, 300, 0, 0, 0, 2, '');
 
 -- --------------------------------------------------------
 
@@ -12221,7 +12262,20 @@ CREATE TABLE IF NOT EXISTS `ps_stock_mvt` (
   PRIMARY KEY (`id_stock_mvt`),
   KEY `id_stock` (`id_stock`),
   KEY `id_stock_mvt_reason` (`id_stock_mvt_reason`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `ps_stock_mvt`
+--
+
+INSERT INTO `ps_stock_mvt` (`id_stock_mvt`, `id_stock`, `id_order`, `id_supply_order`, `id_stock_mvt_reason`, `id_employee`, `employee_lastname`, `employee_firstname`, `physical_quantity`, `date_add`, `sign`, `price_te`, `last_wa`, `current_wa`, `referer`) VALUES
+(1, 78, NULL, NULL, 11, 1, 'Bruzzese', 'Lucien', 300, '2023-05-16 06:03:32', 1, '0.000000', '0.000000', '0.000000', NULL),
+(2, 77, NULL, NULL, 11, 1, 'Bruzzese', 'Lucien', 300, '2023-05-16 06:03:46', 1, '0.000000', '0.000000', '0.000000', NULL),
+(3, 76, NULL, NULL, 11, 1, 'Bruzzese', 'Lucien', 300, '2023-05-16 06:04:09', 1, '0.000000', '0.000000', '0.000000', NULL),
+(4, 75, NULL, NULL, 11, 1, 'Bruzzese', 'Lucien', 300, '2023-05-16 06:04:19', 1, '0.000000', '0.000000', '0.000000', NULL),
+(5, 74, NULL, NULL, 11, 1, 'Bruzzese', 'Lucien', 300, '2023-05-16 06:04:32', 1, '0.000000', '0.000000', '0.000000', NULL),
+(6, 73, NULL, NULL, 11, 1, 'Bruzzese', 'Lucien', 300, '2023-05-16 06:04:47', 1, '0.000000', '0.000000', '0.000000', NULL),
+(7, 72, NULL, NULL, 11, 1, 'Bruzzese', 'Lucien', 300, '2023-05-16 06:04:58', 1, '0.000000', '0.000000', '0.000000', NULL);
 
 -- --------------------------------------------------------
 

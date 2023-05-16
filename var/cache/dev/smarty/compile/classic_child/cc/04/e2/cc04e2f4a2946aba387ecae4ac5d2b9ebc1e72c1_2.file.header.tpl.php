@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.47, created on 2023-05-12 08:46:25
+/* Smarty version 3.1.47, created on 2023-05-16 05:17:10
   from 'C:\wamp64\www\prestashop\modules\ps_checkout\views\templates\hook\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.47',
-  'unifunc' => 'content_645de0c1dab045_99649746',
+  'unifunc' => 'content_6462f5b6217c01_70198036',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_645de0c1dab045_99649746 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6462f5b6217c01_70198036 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['contentToPrefetch']->value, 'content');
 $_smarty_tpl->tpl_vars['content']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['content']->value) {

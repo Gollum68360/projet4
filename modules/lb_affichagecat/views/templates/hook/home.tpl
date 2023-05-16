@@ -7,8 +7,6 @@
 		<a href="{$categorie1->getLink()}">
 			<p><img src="{$chemin}{$image1}" class="img img-responsive"></p>
 			<p>{$categorie1->description nofilter}</p>
-
-
 			<h3>{$categorie1->name}</h3>
 
 		</a>

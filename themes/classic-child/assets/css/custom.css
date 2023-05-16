@@ -66,7 +66,4 @@
     background-color: #1C1C1C;
 }
 
-.product-miniature .thumbnail-container .product-thumbnail img {
-    background-color: red;
-}
-
+.product-miniature .thumbnail-container .product-thumbnail img {}

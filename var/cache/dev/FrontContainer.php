@@ -3093,7 +3093,6 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
                 62 => 'ps_facetedsearch',
                 63 => 'lb_module_simple',
                 64 => 'lb_affichagecat',
-                65 => 'tp_avis_produits',
             ],
             'ps_cache_dir' => 'C:\\wamp64\\www\\prestashop/var/cache/dev\\',
             'mail_themes_uri' => '/mails/themes',
